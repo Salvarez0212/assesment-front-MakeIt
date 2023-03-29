@@ -1,0 +1,33 @@
+.header__container {
+  background-color: #2843bda6;
+  height: 120px;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+
+  .title__container {
+    text-align: center;
+    h1 {
+      font-size: 18px;
+    }
+  }
+
+  .navbar__container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding-bottom: 20px;
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      cursor: pointer;
+      color: black;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
