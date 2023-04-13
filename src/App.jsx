@@ -1,8 +1,8 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { Products } from "./pages/products/Products.pages";
-import { About } from "./pages/about/About.pages";
-import { Layout } from "./components/layout/Layout.componets";
-import "./App.scss";
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { Products } from './pages/products/Products.pages';
+import { About } from './pages/about/About.pages';
+import { Layout } from './components/layout/Layout.componets';
+import './App.scss';
 
 function App() {
   return (

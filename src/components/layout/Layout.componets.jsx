@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
-import "./layout.components.scss";
+import { Outlet, Link } from 'react-router-dom';
+import './layout.components.scss';
 
 export const Layout = () => {
   return (

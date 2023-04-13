@@ -1,10 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import { useRef, useState, useEffect } from 'react';
 
 export const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const Ref = useRef(null);
-  const [timer, setTimer] = useState("00:00:00");
+  const [timer, setTimer] = useState('00:00:00');
 
   const getTimeRemaining = (e) => {
     const total = Date.parse(e) - Date.parse(new Date());
@@ -20,14 +20,12 @@ export const ProductCard = ({ product }) => {
   };
 
   const startTimer = (e) => {
-    let { total, hours, minutes, seconds } = getTimeRemaining(e);
+    const { total, hours, minutes, seconds } = getTimeRemaining(e);
     if (total >= 0) {
       setTimer(
-        (hours > 9 ? hours : "0" + hours) +
-          ":" +
-          (minutes > 9 ? minutes : "0" + minutes) +
-          ":" +
-          (seconds > 9 ? seconds : "0" + seconds)
+        `${hours > 9 ? hours : `0${hours}`}:${minutes > 9 ? minutes : `0${minutes}`}:${
+          seconds > 9 ? seconds : `0${seconds}`
+        }`
       );
     }
   };
@@ -47,7 +45,7 @@ export const ProductCard = ({ product }) => {
   };
 
   const getDeadTime = () => {
-    let deadline = new Date();
+    const deadline = new Date();
 
     deadline.setSeconds(deadline.getSeconds() + randomTime);
     return deadline;
@@ -64,7 +62,7 @@ export const ProductCard = ({ product }) => {
   return (
     <article className="product__card" key={product.id}>
       <picture className="product__image-container">
-        <img src={product.image} alt="Product image" />
+        <img src={product.image} alt="Product" />
       </picture>
       <div className="product__title">
         <p>{product.title}</p>
@@ -73,9 +71,10 @@ export const ProductCard = ({ product }) => {
         <p>{timer}</p>
 
         <button
+          type="button"
           className="detail__button"
           onClick={handleClick}
-          disabled={timer === "00:00:00"}
+          disabled={timer === '00:00:00'}
         >
           Go to detail
         </button>

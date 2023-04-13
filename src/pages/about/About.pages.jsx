@@ -1,6 +1,6 @@
-import { BsCheckLg } from "react-icons/bs";
-import avatar from "../../assets/profile.jpg";
-import "./about.pages.scss";
+import { BsCheckLg } from 'react-icons/bs';
+import avatar from '../../assets/profile.jpg';
+import './about.pages.scss';
 
 export const About = () => {
   return (
@@ -8,7 +8,7 @@ export const About = () => {
       <main className="main__about">
         <article className="main__about-info">
           <picture className="avatar__container">
-            <img src={avatar} alt="Profile Image" />
+            <img src={avatar} alt="Profile Avatar" />
           </picture>
           <div className="name__about">
             <p>Sebastian Alvarez Henao</p>
@@ -17,11 +17,10 @@ export const About = () => {
         <article className="second__about">
           <div className="description__about">
             <p>
-              Hola! mi nombre es Sebastian, tengo 23 años y vivo en la ciudad de
-              Medellin, Colombia. Soy un estudiante de desarrollo web apasionado
-              por el Front, también soy estudiante de Ingeniería mecánica. Me
-              gusta jugar videojuegos y leer un libro de vez en cuando. Suelo
-              despejar mi mente saliendo con mis amigos o mi novia.
+              Hola! mi nombre es Sebastian, tengo 23 años y vivo en la ciudad de Medellin, Colombia.
+              Soy un estudiante de desarrollo web apasionado por el Front, también soy estudiante de
+              Ingeniería mecánica. Me gusta jugar videojuegos y leer un libro de vez en cuando.
+              Suelo despejar mi mente saliendo con mis amigos o mi novia.
             </p>
           </div>
           <div className="learn__about">

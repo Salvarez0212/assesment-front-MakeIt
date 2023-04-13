@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { useDispatch } from "react-redux";
-import Loader from "../../components/loader/Loader";
-import { fetchProducts } from "../../redux/feature/productSlice.feature";
-import "./productDetail.scss";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import { useDispatch } from 'react-redux';
+import Loader from '../../components/loader/Loader';
+import { fetchProducts } from '../../redux/feature/productSlice.feature';
+import './productDetail.scss';
 
 export const ProductDetail = () => {
   const [productos, setProductos] = useState([]);
@@ -18,16 +18,15 @@ export const ProductDetail = () => {
         const data = await dispatch(fetchProducts());
         return data;
       } catch (error) {
-        console.log(error);
+        return error;
       }
     };
     getProducts().then((res) => setProductos(res.payload));
-  }, []);
+  }, [dispatch]);
 
   const productFilter = (_id) => {
     return productos.find((pro) => pro.id == _id);
   };
-  console.log(productos.find((pro) => pro.id == id));
   const product = productFilter(id);
 
   return product === undefined ? (
@@ -37,7 +36,7 @@ export const ProductDetail = () => {
       <section className="product__container">
         <article className="product__description-container">
           <picture className="image_container">
-            <img src={product.image} alt="Product image" />
+            <img src={product.image} alt="Product" />
           </picture>
           <div className="product__title-detail">
             <p>{product.title}</p>

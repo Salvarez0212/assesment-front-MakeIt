@@ -1,7 +1,7 @@
-import { Link, Routes, Route } from "react-router";
-import { ProductList } from "./components/ProductList.products";
-import { ProductDetail } from "../productDetail/ProductDetail.pages";
-import "./product.pages.scss";
+import { Routes, Route } from 'react-router';
+import { ProductList } from './components/ProductList.products';
+import { ProductDetail } from '../productDetail/ProductDetail.pages';
+import './product.pages.scss';
 
 export const Products = () => {
   return (
