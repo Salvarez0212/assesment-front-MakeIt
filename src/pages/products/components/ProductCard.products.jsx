@@ -32,6 +32,7 @@ export const ProductCard = ({ product }) => {
 
   const timeGenerator = Math.random() * (181 - 60) + 60;
   const randomTime = Math.floor(timeGenerator);
+
   const clearTimer = (e) => {
     const minutes = Math.floor(randomTime / 60);
     const seconds = randomTime - minutes * 60;
